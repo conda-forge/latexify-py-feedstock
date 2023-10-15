@@ -1,11 +1,11 @@
-About latexify-py
-=================
+About latexify-py-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/latexify-py-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/google/latexify_py
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/latexify-py-feedstock/blob/main/LICENSE.txt)
 
 Summary: Generates LaTeX source from Python functions.
 
