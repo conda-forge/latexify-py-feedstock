@@ -25,7 +25,7 @@ requirements:
 
 test:
   imports:
-    - latexify_py
+    - latexify
   commands:
     - pip check
   requires:
