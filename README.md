@@ -7,7 +7,7 @@ Home: https://github.com/google/latexify_py
 
 Package license: Apache-2.0
 
-Summary: Generates LaTeX source from Python functions.
+Summary: Generates LaTeX math description from Python functions.
 
 Current build status
 ====================
