@@ -6,34 +6,33 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/latexify_py-{{ version }}.tar.gz
   sha256: 78f98bd465a198e642ec95ae2dda8771fa1083f86f255bd8e0f11858440b1ff4
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
-    - python >=3.6,<3.9
-    - pip
+    - python >=3.7,<3.12
     - hatchling
+    - pip
   run:
-    - python >=3.6,<3.9
+    - python >=3.7,<3.12
     - dill >=0.3.2
 
 test:
   imports:
-    - latexify
+    - latexify_py
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://github.com/google/latexify_py
-  summary: Generates LaTeX source from Python functions.
+  summary: Generates LaTeX math description from Python functions.
   license: Apache-2.0
   license_file: LICENSE
 
