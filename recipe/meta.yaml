@@ -1,5 +1,5 @@
 {% set name = "latexify-py" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/latexify_py-{{ version }}.tar.gz
-  sha256: 81c6513900c0edf016a814b5112c1d0c4d31454f7bbc8ebf192bca48a6c32a42
+  sha256: b023cc442c2464cd7c81ca34b8437ea23e621268442264a16d14ce5c0b74b693
 
 build:
   noarch: python
