@@ -1,0 +1,44 @@
+schema_version: 1
+
+context:
+  name: latexify-py
+  version: "0.4.4"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/latexify_py-${{ version }}.tar.gz
+  sha256: f89274984811fb5b1436c98670814b21502cb34a0becadababcf3e1ec84e426e
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }},<3.12
+    - dill >=0.3.2
+
+tests:
+  - python:
+      imports:
+        - latexify
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: Generates LaTeX math description from Python functions.
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/google/latexify_py
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
